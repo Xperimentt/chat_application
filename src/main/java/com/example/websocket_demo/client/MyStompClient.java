@@ -29,7 +29,7 @@ public class MyStompClient {
         stompClient.setMessageConverter(new MappingJackson2MessageConverter());
 
         StompSessionHandler sessionHandler = new MyStompSessionHandler(messageListener, username);
-        String url = "ws://localhost:8080/ws"; // Use ws:// for WebSocket
+        String url = "https://chat-application-8lqu.onrender.com/ws"; // Use ws:// for WebSocket
 
         session = stompClient.connectAsync(url, sessionHandler).get();
     }
